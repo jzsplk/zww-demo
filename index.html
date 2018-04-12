@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zhua wawa </title>
+
+    <meta name="viewport" content="width=505,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="bookmark" type="image/x-icon" href="favicon.ico"/>
+
+    <link rel="stylesheet" href="css/style.css">
+
+     <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.1.1/dist/sweetalert2.all.min.js"></script>
+
+</head>
+<body>
+	<main>
+        <header class="header">
+            <p class="health txt">HP: <span class="hp"></span> </p>
+
+            <p class="key txt"> 钥匙数量: <span class="keynumber"></span></p>    
+
+            <p class="record txt"> 本地记录: <span class="highscore"></span></p>
+
+            <button id="btn-menu" class="btn-menu btn-toggle">
+                <p class="line"></p>
+                <p class="line"></p>
+                <p class="line"></p> 
+            </button>
+
+            <ul id="menu" class="menu-list">
+                <li id="btn-ranking" class="btn-option btn-toggle"></li>
+                <li id="btn-instruction" class="btn-option btn-toggle" ></li>
+                <li id="btn-restart" class="btn-option btn-toggle"></li>
+            </ul>
+        </header>
+
+        
+        <div id="operation-panel" class="operation-panel">
+            <button id="arrow-up" class="arrow-up arrow-key">⇧</button>
+            <button id="arrow-down" class="arrow-down arrow-key">⇩</button>
+            <button id="arrow-left" class="arrow-left arrow-key">⇦</button>
+            <button id="arrow-right" class="arrow-right arrow-key">⇨</button>
+            <button id="space" class="space arrow-key">⎋</button>
+        </div>
+        <canvas id="video-canvas"></canvas>
+        
+	</main>
+
+
+    <script type="text/javascript" src="js/jsmpeg.min.js"></script>
+    <script type="text/javascript">
+        var canvas = document.getElementById('video-canvas');
+        var url = 'ws://'+'47.97.25.165'+':8084/';
+        //var url = 'ws://'+document.location.hostname+':8084/';
+        var player = new JSMpeg.Player(url, {canvas: canvas});
+    </script>
+
+<!--     <script src="js/resources.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/Manager.js"></script> -->
+<!--     <script src="js/app.js"></script> -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script>
+    
+    </script>
+      
+</body>
+</html>
