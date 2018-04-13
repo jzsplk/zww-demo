@@ -173,76 +173,86 @@ main {
   color: white;
 }
 
-/* 移动设备触摸板*/
-.operation-panel {
-    /*display: none;*/
-    position: absolute;
-    width: 360px;
-    height: 180px;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -180px;
-    user-select: none;
+.player-view {
+  .video-canvas {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  /* 移动设备触摸板*/
+  .operation-panel {
+      /*display: none;*/
+      position: relative;
+      width: 360px;
+      height: 180px;
+      bottom: 10px;
+/*      left: 55%;*/
+      margin: 0 auto;
+      user-select: none;
+      background-color: #20140A
+  }
+
+  .arrow-key {
+      background-color: #24519d;
+      color: #fff;
+      text-align: center;
+      font-size: 48px;
+      opacity: 0.7;
+      border-radius: 20px;
+  }
+
+  .arrow-up {
+      position: relative;
+      top: 10%;
+      left: 25%;
+      margin-left: -50px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .arrow-down {
+      position: relative;
+      bottom: -50%;
+      left: 23%;
+      margin-left: -50px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .arrow-left {
+      position: relative;
+      left: -5%;
+      top: 30%;
+      margin-top: -50px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .arrow-right {
+      position: relative;
+      left: 6%;
+      top: 30%;
+      margin-top: -50px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+  }
+
+  .space {
+      position: relative;
+      right: -10%;
+      top: 30%;
+      margin-top: -50px;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+  }
 }
 
-.arrow-key {
-    background-color: #24519d;
-    color: #fff;
-    text-align: center;
-    font-size: 48px;
-    opacity: 0.7;
-    border-radius: 20px;
-}
-
-.arrow-up {
-    position: absolute;
-    top: 0;
-    left: 25%;
-    margin-left: -50px;
-    width: 100px;
-    height: 75px;
-    line-height: 80px;
-}
-
-.arrow-down {
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    margin-left: -50px;
-    width: 100px;
-    height: 75px;
-    line-height: 80px;
-}
-
-.arrow-left {
-    position: absolute;
-    left: -20%;
-    top: 50%;
-    margin-top: -50px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-}
-
-.arrow-right {
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    margin-top: -50px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-}
-
-.space {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -50px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-}
 
 .popup-board {
     z-index: 5;

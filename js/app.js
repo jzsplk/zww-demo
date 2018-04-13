@@ -1,8 +1,34 @@
+/*eslint_d-env node */
 //这里是我们游戏中的一些常数
 // var WIDTH = 101,
 // HEIGHT = 83,
 // BASIC_SPEED = 100,
 // HighScore = 0;
+const MQTT_URI = "http://192.168.1.30/";
+const BASE_URL = "https://www.iqi1.com/";
+const URL_LOGIN_WEIXIN = "api/auth/AuthWith?RefSource=wechat"; //wechat登录
+const URL_TOKEN_UPDATE = "api/auth/updatetoken"; //更新token
+const URL_HOME_LIST = "api/app/doll/room"; //房间列表
+const URL_HOME_INFO = "api/app/doll/room"; // ?id= 单个房间信息
+const URL_ROOM_ENTER = "api/app/doll/room/enter"; //用户进入房间
+const URL_ROOM_LEAVE = "api/app/doll/room/leave"; //用户离开房间
+const URL_ROOM_QUEUE = "api/app/doll/room/queue";//用户进入预约
+const URL_ROOM_RANK_INFO = "api/app/doll/room/caughtInfo";//该房间的排行与抓中记录
+const URL_ROOM_LEAVE_QUEUE = "api/app/doll/room/leaveQueue";//用户离开预约
+const URL_USER_GIFT = "api/gift";    //用户娃娃列表
+const URL_USER_BALANCE = "api/balance";     //查询用户余额
+const URL_USER_BILLLIST = "api/balance/log";     //用户账单
+const URL_USER_RECHARGE = "api/balance/recharge";  //充值返回订单号
+const URL_RECHARGING_LIST = "api/balance/rechargingList";  //充值返回订单号
+const URL_WECHAT_PAY = "api/wechatpay/pay";
+const URL_IMPORT_GIFT = "api/receipt/importgift"; //把礼物导入订单，走订单流程
+const URL_APP_UPDATE = "uploads/yqzzz.json";
+const URL_ADDRESS_LIST = "api/addr";
+const URL_ADD_ADDRESS = "api/addr/append";
+const URL_UPDATE_ADDRESS = "api/addr/update";
+const URL_REMOVE_ADDRESS = "api/addr/remove";
+const URL_DEF_ADDRESS = "api/addr/def";  //设置默认地址
+
 
 // Create a client instance
 var client = new Paho.MQTT.Client('q.emqtt.com', Number(8083), "clientId");

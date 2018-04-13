@@ -21,11 +21,11 @@
 <body>
 	<main>
         <header class="header">
-            <p class="health txt">HP: <span class="hp"></span> </p>
+            <p class="health txt">全部娃娃<span class="hp"></span> </p>
 
-            <p class="key txt"> 钥匙数量: <span class="keynumber"></span></p>    
+            <p class="key txt"> LineFriends <span class="keynumber"></span></p>    
 
-            <p class="record txt"> 本地记录: <span class="highscore"></span></p>
+            <p class="record txt"> 热门 <span class="highscore"></span></p>
 
             <button id="btn-menu" class="btn-menu btn-toggle">
                 <p class="line"></p>
@@ -39,23 +39,23 @@
                 <li id="btn-restart" class="btn-option btn-toggle"></li>
             </ul>
         </header>
+        <section class="player-view">
+          <!-- 娃娃机画面 -->
+          <div class="video-canvas"><canvas id="video-canvas"></canvas></div>
+          <div id="operation-panel" class="operation-panel">
+              <button id="arrow-up" class="arrow-up arrow-key">⇧</button>
+              <button id="arrow-down" class="arrow-down arrow-key">⇩</button>
+              <button id="arrow-left" class="arrow-left arrow-key">⇦</button>
+              <button id="arrow-right" class="arrow-right arrow-key">⇨</button>
+              <button id="space" class="space arrow-key">⎋</button>
+          </div>  
+        </section>
 
-        
-        <div id="operation-panel" class="operation-panel">
-            <button id="arrow-up" class="arrow-up arrow-key">⇧</button>
-            <button id="arrow-down" class="arrow-down arrow-key">⇩</button>
-            <button id="arrow-left" class="arrow-left arrow-key">⇦</button>
-            <button id="arrow-right" class="arrow-right arrow-key">⇨</button>
-            <button id="space" class="space arrow-key">⎋</button>
-        </div>
-        <!-- 娃娃机画面 -->
-        <canvas id="video-canvas"></canvas>
         
 	</main>
 
 
     <script type="text/javascript" src="js/jsmpeg.min.js">
-        
     </script>
     <script type="text/javascript">
 

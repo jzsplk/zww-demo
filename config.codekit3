@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "26148",
 "files": {
+	"\/.eslintrc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/.eslintrc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/css\/style-min.css": {
 		"aP": 1,
 		"bl": 0,
