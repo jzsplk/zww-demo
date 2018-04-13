@@ -235,10 +235,48 @@ function connectionToggle(){
   } else {
     initMQTTClient();
   }
-
-
 }
 
+//subscribe
+function subscribe(){
+    var topic = document.getElementById("subscribeTopicInput").value;
+    var qos = document.getElementById("subscribeQosInput").value;
+    console.info('Subscribing to: Topic: ', topic, '. QoS: ', qos);
+    client.subscribe(topic, {qos: Number(qos)});
+}
+
+//unsubscribe
+function unsubscribe(){
+    var topic = document.getElementById("subscribeTopicInput").value;
+    console.info('Unsubscribing from ', topic);
+    client.unsubscribe(topic, {
+         onSuccess: unsubscribeSuccess,
+         onFailure: unsubscribeFailure,
+         invocationContext: {topic : topic}
+     });
+}
+
+function unsubscribeSuccess(context){
+    console.info('Successfully unsubscribed from ', context.invocationContext.topic);
+}
+
+function unsubscribeFailure(context){
+    console.info('Failed to  unsubscribe from ', context.invocationContext.topic);
+}
+
+//publish
+function publish(){
+    var topic = document.getElementById("publishTopicInput").value;
+    var qos = document.getElementById("publishQosInput").value;
+    var message = document.getElementById("publishMessageInput").value;
+    var retain = document.getElementById("publishRetainInput").checked
+    console.info('Publishing Message: Topic: ', topic, '. QoS: ' + qos + '. Message: ', message);
+    message = new Paho.MQTT.Message(message);
+    message.destinationName = topic;
+    message.qos = Number(qos);
+    message.retained = retain;
+    client.send(message);
+}
 
 //ffmepg
 var canvas = document.getElementById('video-canvas');

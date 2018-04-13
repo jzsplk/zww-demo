@@ -141,6 +141,53 @@
                         </div>
                 </div>
                 <div class="panel-heading">Subscribe</div>
+                <div id="panel-body">
+                    <div class="row">
+                        <div id="form-group">
+                            <label>Topic </label><input type="text" id="subscribeTopicInput">
+                        </div>
+
+                        <div id="form-group">
+                            <label>Qos </label>
+                            <select name="qos" id="subscribeQosInput">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                        <button id="subscribeButton"  onclick=subscribe()>Subscribe</button>
+                        <button id="unsubscribeButton"  onclick=unsubscribe()>Unsubscribe</button>
+                    </div>
+                </div>
+
+                <div class="panel-heading">Publish Message</div>
+                <div id="panel-body">
+                    <div class="row">
+                        <div id="form-group">
+                            <label>Topic </label><input type="text" id="publishTopicInput">
+                        </div>
+
+                        <div id="form-group">
+                            <label>Qos </label>
+                            <select name="qos" id="publishQosInput">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <div id="form-group">
+                            <label>Message </label><input type="text" id="publishMessageInput">
+                        </div>
+
+                        <div id="form-group">
+                            <label>Retain </label>
+                            <input type="checkbox" id="publishRetainInput">
+                        </div>
+
+                        <button id="publishButton"  onclick=publish()>Publish</button>
+                    </div>
+                </div>
 
 
 
