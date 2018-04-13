@@ -14,7 +14,7 @@ This game was built as a Udacity Course project. The purpose of the project is t
 ## How to Load the game
 
 - Clone the **[repo](https://github.com/jzsplk/front-udacity-ArcadeGame.git)** and open index.html -- or --
-- Play on GitHub.io: **[xc's frogger game](https://jzsplk.github.io/front-udacity-ArcadeGame/)**
+- Play on GitHub.io: **[xc's zhuawawa demo](https://jzsplk.github.io/zww-demo/)**
 
 ## Resources used to create the game:
 
