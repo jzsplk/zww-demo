@@ -278,6 +278,13 @@ function publish(){
     client.send(message);
 }
 
+
+//
+// Just in case someone sends html
+function safe_tags_regex(str) {
+   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 //ffmepg
 var canvas = document.getElementById('video-canvas');
 var url = 'ws://'+'47.97.25.165'+':8084/';
