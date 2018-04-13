@@ -178,6 +178,10 @@ main {
     position: relative;
     width: 500px;
     margin: 0 auto;
+
+    canvas {
+      width: 360px;
+    }
   }
 
   /* 移动设备触摸板*/
@@ -251,8 +255,35 @@ main {
       height: 100px;
       line-height: 100px;
   }
+
+  /* 详细信息*/
+  .details {
+    margin: 0 auto;
+    width: 360px;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
+/* test */
+.test {
+  width: 80%;
+  margin: 0 auto;
+  
+  .panel-body{
+    display: inline-flex;
+  }
+
+  label {
+    display: block;
+  }
+
+  #form-group {
+    display: inline-block;
+  }
+}
 
 .popup-board {
     z-index: 5;

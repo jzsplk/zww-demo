@@ -21,11 +21,11 @@
 <body>
 	<main>
         <header class="header">
-            <p class="health txt">全部娃娃<span class="hp"></span> </p>
+            <p class="health txt">全部娃娃<label class="hp"></label> </p>
 
-            <p class="key txt"> LineFriends <span class="keynumber"></span></p>    
+            <p class="key txt"> LineFriends <label class="keynumber"></label></p>    
 
-            <p class="record txt"> 热门 <span class="highscore"></span></p>
+            <p class="record txt"> 热门 <label class="highscore"></label></p>
 
             <button id="btn-menu" class="btn-menu btn-toggle">
                 <p class="line"></p>
@@ -42,13 +42,143 @@
         <section class="player-view">
           <!-- 娃娃机画面 -->
           <div class="video-canvas"><canvas id="video-canvas"></canvas></div>
+          <!-- 控制面板 -->
           <div id="operation-panel" class="operation-panel">
               <button id="arrow-up" class="arrow-up arrow-key">⇧</button>
               <button id="arrow-down" class="arrow-down arrow-key">⇩</button>
               <button id="arrow-left" class="arrow-left arrow-key">⇦</button>
               <button id="arrow-right" class="arrow-right arrow-key">⇨</button>
               <button id="space" class="space arrow-key">⎋</button>
-          </div>  
+          </div> 
+          <!-- 控制面板 -->
+          <div class="details">
+              <img src="https://www.iqi1.com/uploads/301bbe4ae1dbf3e88a858c814fca07129cecbce5.jpg" alt="">
+          </div>   
+        </section>
+        <section class="test">
+            <div>
+                <div id="connectionStatus">Status:</div>
+                <div class="panel-body" id="serverCollapse">
+                    <form action="">
+                        <div class="row">
+
+                            <div id="form-group">
+                                <label for="hostInput">Host
+                                </label>
+                                <input type="text" id="hostInput" value="iot.eclipse.org">
+                            </div>
+
+                            <div id="form-group">
+                                <label for="portInput">Port</label>
+                                <input type="text" id="portInput" value="443">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Client ID </label>
+                                <input type="text" id="clientIdInput" value="xc">
+                            </div>
+
+                            <div id="form-group">
+                                <button id="clientConnectButton"  onclick=connectionToggle()>Connect</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div id="form-group">
+                                <label>Path </label>
+                                <input type="text" id="pathInput" value="/ws">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Username </label>
+                                <input type="text" id="userInput">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Password </label><input type="text" id="passInput">
+                            </div>
+
+                            <div id="form-group">
+                                <label>keep-Alive </label><input type="text" id="keepAliveInput" value="60">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Timeout </label><input type="text" id="timeoutInput" value="3">
+                            </div>
+
+                            <div id="form-group">
+                                <label>TLS </label><input type="checkbox" id="tlsInput" checked="checked">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Clean Session </label><input type="checkbox" id="cleanSessionInput" checked="checked">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="panel-body">
+                    <form action="">
+                        <div class="row">
+                            <div id="form-group">
+                                <label>Last Will Topic </label><input type="text" id="lwtInput">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Qos </label>
+                                    <select name="qos" id="lwQosInput">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                            </div>
+
+                            <div id="form-group">
+                                <label>Retain </label><input type="checkbox" id="lwRetainInput">
+                            </div>
+
+                            <div id="form-group">
+                                <label>Last Will Message </label><input type="text" id="lwMInput">
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="panel-heading">Subscribe</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+                <label></label>
+            </div>
+
+
+            <div class="history">
+                <table class="table table-hover table-condensed  tableSection" id="incomingMessageTable">
+
+                              <thead>
+                                <tr>
+                                  <th>Topic</th>
+                                  <th>Payload</th>
+                                  <th>Time</th>
+                                  <th>Qos</th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+            </div>
         </section>
 
         
