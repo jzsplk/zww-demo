@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+    text-align: center;
+    font: sans-serif;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+main {
+
+}
+
+/*ul {
+	text-align: left;
+}*/
+
+/*.board-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 285px;
+  height: 308px;
+  background: linear-gradient(to bottom, #3a404d, #181c26);
+  border-radius: 10px;
+  box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
+}*/
+
+
+/*header 部分的sytle*/
+.header {
+    position: relative;
+  	height: 50px;
+    width: 505px;
+    line-height: 50px;
+    background: linear-gradient(to bottom, #3a404d, #181c26);
+    margin: 0 auto;
+}
+
+/* header中的文字*/
+.txt {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  color:#FFF;
+  font-weight:bold;
+  margin-right: 5px;
+  margin-left:40px;
+  text-shadow: 1px 1px #000;
+}
+
+.header span {
+  color:#F00;
+}
+
+
+.leaderboard {
+    position: absolute;
+    left:0%;
+    top:110px;
+  	text-align: left;
+  	display: inline-block;
+  	height: 360px;
+  	min-width: 320px;
+  	margin:0;
+    padding:0;
+    background: linear-gradient(to bottom, #3a404d, #181c26);
+    border:5px solid #CCC;
+    border-radius: 10px;
+    box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
+    overflow: hidden;
+    overflow-y:scroll;
+}
+
+.rank {
+	  position: relative;
+    color:#FFF;
+    font-family: helvetica;
+    padding:2% 5%;
+    border-bottom: 1px solid #555;   
+}
+
+
+.leaderboard small {
+	  display:inline-block;
+    float:right;
+    color:#F00;
+    font-weight:bold;
+    margin-left: 10px;
+}
+
+.userinfo {
+    position: absolute;
+    left:0%;
+    top:50px;
+    text-align: left;
+    display: inline-block;
+    min-width: 320px;
+    background: linear-gradient(to bottom, #3a404d, #181c26);
+    border:5px solid #CCC;
+    border-radius: 10px;
+    box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
+    height: 40px;
+    line-height: 40px;
+}
+
+.user {
+    position: relative;
+    color:#FFF;
+    font-family: helvetica;
+    padding:2% 5%;
+}
+
+.userinfo .score {
+    display:inline-block;
+    float:right;
+    color:#008000;
+    font-weight:bold;
+}
+
+/*menuButton*/
+.btn-menu {
+  display: inline-block;
+  right: 0;
+  width: 55px;
+  height: 50px;
+  margin: 0;
+  padding: 8px;
+  border: none;
+  border-radius: 0;
+  background-color: #181818;
+}
+
+.btn-toggle:hover {
+  background-color: #104008;
+}
+
+.line {
+  margin: 6px;
+  border-bottom: 3px solid white;
+  box-shadow: 3px 3px #000;
+}
+
+/* for menu */
+.menu-list {
+  position: absolute;
+  right: 0px;
+  top:60px;
+  width: 120px;
+  height: 0;
+  margin-top: -1px;
+  background-color: #000;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.btn-option {
+  position: relative;
+  height: 60px;
+  border: 2px solid #251;
+  border-bottom: none;
+  text-shadow: 1px 1px #000;
+  color: white;
+}
+
+/* 移动设备触摸板*/
+.operation-panel {
+    /*display: none;*/
+    position: absolute;
+    width: 360px;
+    height: 180px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -180px;
+    user-select: none;
+}
+
+.arrow-key {
+    background-color: #24519d;
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.arrow-up {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    margin-left: -50px;
+    width: 100px;
+    height: 75px;
+    line-height: 80px;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    margin-left: -50px;
+    width: 100px;
+    height: 75px;
+    line-height: 80px;
+}
+
+.arrow-left {
+    position: absolute;
+    left: -20%;
+    top: 50%;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.arrow-right {
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.space {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.popup-board {
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 516px;
+    height: 750px;
+    left: 50%;
+    margin-left: -258px;
+    top: 0;
+    border-radius: 5px;
+    background-color: #000;
+    opacity: 0.92;
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+.board-content {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+}
+
+/* 游戏说明*/
+.instruction-content {
+    margin-top: 40px;
+    height: 80%;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+.instruction-content h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #fbf850;
+}
+
+.instruction-content h4 {
+    margin: 5px auto;
+    color: #50b3fb;
+}
+
+.instruction-content p {
+    margin: 10px auto;
+}
+
+.instruction-content li {
+    margin: 10px auto;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+.btn-close {
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #263;
+    color: #fff;
+    font-size: 18px;
+    border-color: #222;
+    border-radius: 5px;
+}
+

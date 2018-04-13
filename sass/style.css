@@ -32,7 +32,6 @@ body {
   height: 50px;
   width: 505px;
   line-height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a404d), to(#181c26));
   background: linear-gradient(to bottom, #3a404d, #181c26);
   margin: 0 auto; }
 
@@ -63,12 +62,10 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a404d), to(#181c26));
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border: 5px solid #CCC;
   border-radius: 10px;
-  -webkit-box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
-          box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+  box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
   overflow: hidden;
   overflow-y: scroll; }
 
@@ -93,12 +90,10 @@ body {
   text-align: left;
   display: inline-block;
   min-width: 320px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a404d), to(#181c26));
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border: 5px solid #CCC;
   border-radius: 10px;
-  -webkit-box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
-          box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
+  box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
   height: 40px;
   line-height: 40px; }
 
@@ -132,8 +127,7 @@ body {
 .line {
   margin: 6px;
   border-bottom: 3px solid white;
-  -webkit-box-shadow: 3px 3px #000;
-          box-shadow: 3px 3px #000; }
+  box-shadow: 3px 3px #000; }
 
 /* for menu */
 .menu-list {
@@ -145,7 +139,6 @@ body {
   margin-top: -1px;
   background-color: #000;
   overflow: hidden;
-  -webkit-transition: 0.2s;
   transition: 0.2s; }
 
 .btn-option {
@@ -163,12 +156,9 @@ body {
   width: 360px;
   height: 180px;
   bottom: 10px;
-  left: 50%;
+  left: 60%;
   margin-left: -180px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .arrow-key {
   background-color: #24519d;
@@ -237,10 +227,7 @@ body {
   opacity: 0.92;
   color: #fff;
   cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .board-content {
   margin: auto;
