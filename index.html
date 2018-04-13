@@ -190,20 +190,40 @@
                 </div>
 
                 <div class="panel-body collapse in fixed-height-panel" id="subscriptionsCollapse">
-                  <table class="table table-hover table-condensed tableSection" id="lastMessageTable">
-                    <thead>
-                      <tr>
-                        <th>Topic</th>
-                        <th>Payload</th>
-                        <th>Time</th>
-                        <th>QoS</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+                  <div>Last Message</div>
+                  <div class="row">
+                      <table class="table table-hover table-condensed tableSection" id="lastMessageTable">
+                        <thead>
+                          <tr>
+                            <th>Topic</th>
+                            <th>Payload</th>
+                            <th>Time</th>
+                            <th>QoS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
 
-                    </tbody>
+                        </tbody>
 
-                  </table>
+                      </table>
+                  </div>
+                  
+                  <div>History</div>
+                  <div class="row">
+                      <table class="table table-hover table-condensed  tableSection" id="incomingMessageTable">
+
+                        <thead>
+                          <tr>
+                            <th>Topic</th>
+                            <th>Payload</th>
+                            <th>Time</th>
+                            <th>Qos</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                  </div>
+                  
                 </div>
 
 

@@ -243,6 +243,8 @@ body {
     display: block; }
   .test #form-group {
     display: inline-block; }
+  .test .row {
+    display: block; }
 
 .popup-board {
   z-index: 5;
